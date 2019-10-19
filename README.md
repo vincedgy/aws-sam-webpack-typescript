@@ -27,14 +27,14 @@ _Vincent DAGOURY - 2019_
 ![](https://media2.giphy.com/media/26u4gfTMlVGZnNKco/source.gif)
 
 
-with the help of a small lib named 
+# Yes !
 
-> aws-sam-webpack-plugin
+with the help of
 
->>__written by Rich Buggy__
+> ```aws-sam-webpack-plugin```
+>_written by Rich Buggy_
 
 [https://www.npmjs.com/package/aws-sam-webpack-plugin](https://www.npmjs.com/package/aws-sam-webpack-plugin)
-
 
 
 
@@ -436,7 +436,7 @@ Entrypoint HelloWorldFunction = HelloWorldFunction/app.js HelloWorldFunction/app
 
 The build has created : 
 - the ```.aws-sam``` folder
-- the ```build```sub-folder
+- the ```build``` sub-folder
 - copy the ```template.yml``` file
 
 ```shell
@@ -520,12 +520,16 @@ At this point SAM is listening to the debugger on port 5858.
 ![](http://img.over-blog-kiwi.com/0/86/02/84/20140708/ob_620f9a_mo5.png)
 
 
-In Visual Studio Code, do clic on the Debugging section, add a the generated configuration from ```.aws-sam/.vscode/launch.json```
+In Visual Studio Code, do clic on the Debugging section and found the right config for your function.
 
-This comes from ```aws-sam-webpack-plugin```  automatically for each lambdas.
+The plugin as created it automatically for you !
 
 
-You debug, the breakpoint stops, you see the variables... 
+You're debugging... 
+
+the breakpoint stops... 
+
+you see the variables... 
 
 # it's working !
 
@@ -584,10 +588,11 @@ Entrypoint HelloWorldFunction = HelloWorldFunction/app.js HelloWorldFunction/app
 Edit ```app.ts``` and define types for our event and context as parameters of our Handler :
 
 ```ts
-let response
+
 exports.lambdaHandler = async (event:AWSLambda.APIGatewayEvent, 
               context:AWSLambda.APIGatewayEventRequestContext) => {
-    try {
+  let response
+  try {
         response = {
             'statusCode': 200, 
             'body': JSON.stringify({ message: 'hello world' })
@@ -604,7 +609,7 @@ exports.lambdaHandler = async (event:AWSLambda.APIGatewayEvent,
 Webpack wakes up and compile ```app.ts```
 
 ```shell
-tree -a -I node_modules                                         
+$ tree -a -I node_modules                                         
 .
 ├── .aws-sam
 │   └── build
@@ -649,7 +654,10 @@ REPORT RequestId: bd0096cb-c81b-133c-5f4d-c5517c606ddb  Duration: 18.94 ms      
 ```
 
 
-## Working !
+## Typescript is working !
+
+![](https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif)
+
 
 
 
