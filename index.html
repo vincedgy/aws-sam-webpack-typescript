@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>README</title>
+    <meta
+      name="description"
+      content="Reveal.js slidedeck template for a README.md source. Using CDN"
+    />
+    <meta name="author" content="Vincent DAGOURY" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css"
+    />
+
+    <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/simple.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/blood.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/moon.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/serif.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/sky.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/night.min.css" />
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css"
+    />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      // Load print, pdf stylesheets from CDNJs
+      var srcUrlPrefix =
+        "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href =
+        srcUrlPrefix +
+        (window.location.search.match(/print-pdf/gi)
+          ? "css/print/pdf.css"
+          : "css/print/paper.css");
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <!-- Highlight theme
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/darkula.min.css" id="theme"/>
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/css/monokai.min.css" />
+    
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown="README.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+          data-charset="UTF-8"
+        >
+          <!--
+               Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+               For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+           -->
+        </section>
+      </div>
+      <!-- .slides -->
+    </div>
+    <!-- .reveal -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js"></script>
+
+    <script>
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            controlsLayout: "bottom-right", // bottom-right, edges
+            progress: true,
+            history: true,
+            center: true,
+            search: true,
+            slideNumber: false,
+            hash: true,
+            overview: true, // Reveal with key 'o'
+            showNotes: false, // false, true
+            backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+            transition: "slide", // none/fade/slide/convex/concave/zoom
+
+            margin: 0.1,
+            
+            markdown: {
+                smartypants: true
+            },
+
+            // Optional reveal.js plugins, loaded from CDNJs
+            dependencies: [
+              {
+                src: srcUrlPrefix + "lib/js/classList.js",
+                condition: function() {
+                  return !document.body.classList;
+                }
+              },
+              {
+                src: srcUrlPrefix + "plugin/markdown/marked.js",
+                condition: function() {
+                  return !!document.querySelector("[data-markdown]");
+                }
+              },
+              {
+                src: srcUrlPrefix + "plugin/markdown/markdown.min.js",
+                condition: function() {
+                  return !!document.querySelector("[data-markdown]");
+                }
+              },
+              {
+                src: srcUrlPrefix + "plugin/highlight/highlight.min.js",
+                async: true,
+                condition: function() {
+                  return !!document.querySelector("pre code");
+                },
+                callback: function() {
+                  hljs.initHighlightingOnLoad();
+                }
+              },
+              { src: srcUrlPrefix + "plugin/zoom-js/zoom.min.js", async: true },
+              { src: srcUrlPrefix + "plugin/notes/notes.min.js", async: true },
+              { src: srcUrlPrefix + "plugin/search/search.min.js", async: true }
+            ]
+          });
+    </script>
+  </body>
+</html>
