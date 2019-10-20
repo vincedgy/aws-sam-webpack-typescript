@@ -7,7 +7,7 @@ _in_
 
 ---
 
-> Developing and debuging with SAM & typescript with webpack 
+> Developing and debugging with SAM & typescript with webpack 
 
 <small>
 _Vincent DAGOURY - 2019_
