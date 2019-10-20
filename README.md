@@ -1,16 +1,11 @@
-# L'atelier
-
-_in_
-
-
-# Webpack to the rescue
+## "Webpack to the rescue"
 
 ---
 
 > Developing and debugging with SAM & typescript with webpack 
 
 <small>
-_Vincent DAGOURY - 2019_
+_ @Vincedgy - 10/2019_
 </small>
 
 
@@ -47,6 +42,20 @@ by Rich Buggy's [video][video]
 ![Buggy video][video-image]
 
 [video-image]: https://img.youtube.com/vi/my98p7hyaUE/0.jpg
+
+
+
+## ʍɥo ɐɯ ı ?
+
+✌ [https://twitter.com/VinceDgy](https://twitter.com/VinceDgy)
+
+Cloud enabler, CTO, certified AWS Cloud Architect & Dev, love 🐳 Docker, 🌿Spring , Angular, React and so much more
+
+
+
+## Let's do some smart things...
+
+![](https://i.pinimg.com/originals/52/62/93/5262931391db03271654b9607d239ae5.gif)
 
 
 
@@ -680,3 +689,5 @@ REPORT RequestId: bd0096cb-c81b-133c-5f4d-c5517c606ddb  Duration: 18.94 ms      
 # Thank you
 
 ![](https://static.hitek.fr/img/actualite/2013/07/12/1373633772evolutionofgeek.jpg)
+
+https://github.com/vincedgy/aws-sam-webpack-typescript
