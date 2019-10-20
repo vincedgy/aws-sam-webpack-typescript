@@ -18,7 +18,6 @@ _ @Vincedgy - 10/2019_
 
 ## Can we do better ?
 
-
 ![](https://media2.giphy.com/media/26u4gfTMlVGZnNKco/source.gif)
 
 
@@ -39,9 +38,7 @@ by Rich Buggy's [video][video]
 
 [video]: https://www.youtube.com/watch?v=my98p7hyaUE
 
-![Buggy video][video-image]
-
-[video-image]: https://img.youtube.com/vi/my98p7hyaUE/0.jpg
+<embed type="video/webm" src="https://www.youtube-nocookie.com/embed/my98p7hyaUE?controls=1&amp;start=407" width="640" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" />
 
 
 
@@ -49,7 +46,7 @@ by Rich Buggy's [video][video]
 
 ✌ [https://twitter.com/VinceDgy](https://twitter.com/VinceDgy)
 
-Cloud enabler, CTO, certified AWS Cloud Architect & Dev, love 🐳 Docker, 🌿Spring , Angular, React and so much more
+Cloud enabler, CTO, certified AWS Cloud Architect & Dev, 🐳Docker, 🌿Spring , ❤️Angular, ⚛ React and so much more
 
 
 
@@ -266,15 +263,16 @@ module.exports = {
 ```
 
 
-In this config file a new instance of the **aws-sam-plugin** is created and config is applied.
-
 - Line 8 : is the link between the SAM template's entry for the aws-sam-plugin plugin.
 - Line 12 : It will generate a folder with the name of the SAM Function and a ```app.js``` file for each of them
 - Line 14 : It will build the JavaScript generated from TypeScript into a folder ```/.aws-sam/build/```
 - Line 18 : activate source-map
 - Line 31 : you should comment this line (keep prodcution mode activated) 
 
-Note : AWS recommand to **always add the aws-sdk** in your SAM project even if they don't because of the generated volume of code generated. By doing so, you'll have the last fix and features for your project. By commenting the line 31 you leave the 'production' profile activated which comes with aws-sdk in the docker image ! Funny 
+
+AWS recommands to **always add the aws-sdk**
+
+even if the SAM CLI don't install it ... 🐵
 
 - Line 37-44 : you add ts-loader included. which compiles TypeScript (*.ts files) to JavaScript for lambda
 - Line 47-49 : 'aws-sam-plugin' is activated for webpack 
